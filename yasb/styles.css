@@ -364,3 +364,12 @@ QToolTip {
 .traffic-widget .icon {
     font-family: "Segoe UI Symbol";  /* Ensure icon font loads */
 }
+
+.language-widget {
+    padding: 0 6px;
+}
+
+.language-widget .label {
+    font-size: 14px;
+    color: var(--teal);
+}

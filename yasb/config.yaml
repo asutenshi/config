@@ -35,7 +35,7 @@ bars:
     widgets:
       left: ["home", "glazewm_workspaces", "clock"]
       center: ["media"]
-      right: ["battery", "volume", "brightness", "power_menu"]
+      right: ["language", "battery", "volume", "brightness", "power_menu"]
 widgets:
   home:
     type: "yasb.home.HomeWidget"
@@ -83,6 +83,15 @@ widgets:
       label: "{%a, %d %b %H:%M}"
       label_alt: "{%A, %d %B %Y %H:%M}"
       timezones: []
+
+  language:
+    type: "yasb.language.LanguageWidget"
+    options:
+      label: "{lang[language_code]}-{lang[country_code]}"
+      label_alt: "{lang[full_name]}"
+      callbacks:
+        on_left: "toggle_label"
+        on_right: "toggle_menu"
 
   volume:
     type: "yasb.volume.VolumeWidget"
